@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curso Online de SketchUp — Mude sua Trajetória</title>
+  <meta name="description" content="Curso online de SketchUp: aprenda do zero à renderização profissional. Acesse agora e transforme suas ideias em projetos 3D." />
+  <meta property="og:title" content="Curso Online de SketchUp — Mude sua Trajetória" />
+  <meta property="og:description" content="Aprenda SketchUp do zero e comece a criar maquetes e projetos profissionais em 3D. Acesso imediato e certificado." />
+  <meta property="og:image" content="assets/hero.jpg" />
+  <meta name="theme-color" content="#f5f5f5">
+
+  <style>
+    :root{
+      --bg:#f6f6f5;
+      --card:#ffffff;
+      --muted:#6b6b6b;
+      --gold:#d4af37; /* dourado */
+      --accent:#222222;
+      --radius:16px;
+      --fw-700:700;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:var(--accent); -webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:36px auto;padding:20px}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));padding:36px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(20,20,20,0.06)}
+    .kicker{font-size:14px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+    h1{font-size:36px;line-height:1.02;margin:12px 0 10px}
+    .gold{color:var(--gold);font-weight:var(--fw-700);text-shadow:0 2px 12px rgba(212,175,55,0.12)}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--gold);color:#111;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 8px 18px rgba(212,175,55,0.18)}
+    .btn--ghost{background:transparent;border:2px solid rgba(34,34,34,0.06);padding:10px 16px}
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{background:rgba(0,0,0,0.02);padding:10px 12px;border-radius:10px;font-size:14px}
+
+    /* IMAGE */
+    .hero-media{display:flex;justify-content:center}
+    .card-media{width:100%;max-width:420px;border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(20,20,20,0.08)}
+    .card-media img{display:block;width:100%;height:auto}
+
+    /* SECTIONS */
+    section{margin-top:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(10,10,10,0.04)}
+    .muted{color:var(--muted)}
+
+    /* FOOTER */
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero-media{order:-1;margin-bottom:12px}
+      h1{font-size:28px}
+      .grid-3{grid-template-columns:1fr}
+    }
+
+    /* gold shimmer */
+    .gold.shimmer{position:relative;display:inline-block;overflow:hidden}
+    .gold.shimmer:after{content:'';position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));transform:skewX(-20deg);animation:shimmer 2.1s infinite}
+    @keyframes shimmer{0%{left:-40%}50%{left:100%}100%{left:100%}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main class="hero">
+      <div class="hero-card">
+        <div class="kicker">Curso Online • SketchUp</div>
+        <h1><span class="gold shimmer">MUDE SUA TRAJETÓRIA.</span><br><span class="gold shimmer">CRIE O SEU FUTURO.</span></h1>
+        <p class="lead">Aprenda SketchUp do zero ao profissional: modelagem, texturas, iluminação e renderização. Aulas práticas com certificado e acesso vitalício.</p>
+
+        <div class="cta-row">
+          <a class="btn" href="https://go.hotmart.com/G95102120U" target="_blank" rel="noopener">Inscreva-se agora</a>
+          <a class="btn btn--ghost" href="#programa">Ver currículo</a>
+        </div>
+
+        <div class="features" aria-hidden="true">
+          <div class="feature">100% online</div>
+          <div class="feature">Acesso vitalício</div>
+          <div class="feature">Certificado digital</div>
+        </div>
+
+        <div style="margin-top:16px;font-size:14px;color:var(--muted)">Perfeito para arquitetos, designers, engenheiros e estudantes que querem entrar no mercado 3D.</div>
+      </div>
+
+      <div class="hero-media">
+        <!-- Substitua 'assets/hero.jpg' pela sua imagem gerada (ex: hero.png) -->
+        <div class="card-media">
+          <img src="assets/hero.jpg" alt="Aluno usando SketchUp - Curso Online">
+        </div>
+      </div>
+    </main>
+
+    <section id="programa">
+      <h2>O que você vai aprender</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3>Fundamentos</h3>
+          <p class="muted">Interface, ferramentas básicas, organização de cenas e camadas.</p>
+        </div>
+        <div class="card">
+          <h3>Modelagem</h3>
+          <p class="muted">Modelagem de arquitetura e móveis, componentes e bibliotecas.</p>
+        </div>
+        <div class="card">
+          <h3>Renderização</h3>
+          <p class="muted">Texturização, iluminação e export para renderizadores (V-Ray/Lumion).</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:20px">
+      <h2>Depoimentos</h2>
+      <div class="card" style="margin-top:12px">
+        <p class="muted">"Este curso me abriu portas no mercado — em poucas semanas eu já entregava projetos reais." — <strong>Mariana, Arquiteta</strong></p>
+      </div>
+    </section>
+
+    <section style="margin-top:20px">
+      <h2>FAQ</h2>
+      <div class="card" style="margin-top:12px">
+        <p><strong>Como recebo o conteúdo?</strong> Acesso online via plataforma. Aulas gravadas + materiais de apoio.</p>
+        <p><strong>Preciso de experiência?</strong> Não — o curso começa do zero.</p>
+        <p><strong>Há certificado?</strong> Sim, certificado digital ao concluir.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Curso SketchUp • <a href="https://go.hotmart.com/G95102120U" target="_blank" rel="noopener">Inscreva-se</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Atualiza o ano automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Pequena interação do botão: rolar para o programa
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
