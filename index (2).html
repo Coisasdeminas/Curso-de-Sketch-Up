@@ -3,87 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SketchUp: Curso do Zero ao Avançado | Garanta sua Vaga!</title>
+    <title>SketchUp do Zero ao Pro | Curso Online Expert Cursos</title>
     
     <style>
+        /* Variáveis de Cores Baseadas em Stories_Sketchup_3.jpg */
         :root {
-            --cor-principal: #0D47A1; /* Azul Escuro */
-            --cor-secundaria: #FF5722; /* Laranja Hotmart */
-            --cor-fundo: #FAFAFA; /* Cinza Claro / Branco */
-            --cor-texto: #FFFFFF;
-            --cor-texto-escuro: #333333;
+            --cor-fundo-principal: #040D1D; /* Azul Escuro/Quase Preto */
+            --cor-secundaria: #1E88E5;    /* Azul SketchUp/Links */
+            --cor-hotmart: #FF5722;       /* Laranja para CTA */
+            --cor-texto-claro: #FFFFFF;
+            --cor-texto-secundario: #B0BEC5; /* Cinza Claro */
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto-escuro);
+            background-color: var(--cor-fundo-principal);
+            color: var(--cor-texto-claro);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
-
+        
+        /* ---------------------------------------------------- */
+        /* CABEÇALHO com Movimento em Grade */
+        /* ---------------------------------------------------- */
         .header {
-            background-color: var(--cor-principal);
-            color: var(--cor-texto);
-            padding: 30px 20px;
+            padding: 60px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden; /* Garante que a grade não vaze */
+        }
+        
+        /* Efeito de Grade no Background */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, transparent 99%, rgba(30, 136, 229, 0.1) 1%) 0 0,
+                linear-gradient(transparent 99%, rgba(30, 136, 229, 0.1) 1%) 0 0;
+            background-size: 50px 50px; /* Tamanho dos quadrados da grade */
+            animation: moveGrid 30s linear infinite; /* Aplica a animação */
+            opacity: 0.3;
+            z-index: 0;
         }
 
+        @keyframes moveGrid {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 50px 50px;
+            }
+        }
+
+        /* Conteúdo do Cabeçalho */
+        .header-content {
+            position: relative;
+            z-index: 1; /* Garante que o conteúdo fique acima da grade */
+        }
+
+        /* Animação do Letreiro */
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: var(--cor-hotmart);
+            animation: pulseText 2s infinite alternate; /* Aplica a animação */
         }
 
-        .header p {
-            font-size: 1.2em;
+        @keyframes pulseText {
+            0% { text-shadow: 0 0 5px rgba(255, 87, 34, 0.5); }
+            100% { text-shadow: 0 0 20px var(--cor-hotmart); }
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            color: var(--cor-texto-secundario);
             margin-top: 0;
         }
-
+        
+        /* ---------------------------------------------------- */
+        /* Geral */
+        /* ---------------------------------------------------- */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* Botão de Chamada para Ação (CTA) */
-        .cta-button {
-            display: block;
-            width: 90%;
-            max-width: 400px;
-            margin: 20px auto 40px auto;
-            padding: 15px 30px;
-            background-color: var(--cor-secundaria);
-            color: var(--cor-texto);
-            text-decoration: none;
-            font-size: 1.5em;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.1s ease;
-            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        
+        h2 {
             text-align: center;
+            color: var(--cor-secundaria);
+            margin-top: 40px;
+            border-bottom: 2px solid var(--cor-secundaria);
+            padding-bottom: 10px;
+        }
+        
+        /* ---------------------------------------------------- */
+        /* Botões de Ação (CTA) */
+        /* ---------------------------------------------------- */
+        .cta-group {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            width: 90%;
+            max-width: 300px;
+            padding: 15px 30px;
+            margin: 10px;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .cta-button:hover {
+        .btn-saiba-mais {
+            background-color: var(--cor-secundaria);
+        }
+
+        .btn-saiba-mais:hover {
+            background-color: #1565C0;
+            transform: scale(1.05);
+        }
+
+        .btn-compre-agora {
+            background-color: var(--cor-hotmart);
+        }
+
+        .btn-compre-agora:hover {
             background-color: #E64A19;
-            transform: translateY(-2px);
+            transform: scale(1.05);
         }
 
+        /* ---------------------------------------------------- */
         /* Seção de Mídia (Vídeos e Imagens) */
+        /* ---------------------------------------------------- */
         .media-section {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            justify-content: center;
             margin-bottom: 40px;
         }
 
         .media-item {
-            flex: 1 1 300px; /* Flexível, mas com largura mínima de 300px */
-            background-color: #FFFFFF;
+            background-color: #121A2C; /* Cor um pouco mais clara que o fundo */
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(30, 136, 229, 0.2);
         }
 
         .media-item video, .media-item img {
@@ -94,60 +169,52 @@
 
         .media-item h3 {
             text-align: center;
-            color: var(--cor-principal);
-            padding: 10px 0;
+            color: var(--cor-texto-claro);
+            padding: 15px;
             margin: 0;
-            border-top: 1px solid #EEE;
+            background-color: rgba(30, 136, 229, 0.1);
         }
         
-        /* Seção de Benefícios */
-        .benefits-section {
-            background-color: var(--cor-principal);
-            color: var(--cor-texto);
-            padding: 40px 20px;
-            margin-top: 40px;
-            border-radius: 8px;
-        }
-
-        .benefits-section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
-        }
-
-        .benefits-list {
-            list-style: none;
-            padding: 0;
+        /* ---------------------------------------------------- */
+        /* Galeria de Imagens (Para as imagens stories/carrossel) */
+        /* ---------------------------------------------------- */
+        .gallery-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
         }
 
-        .benefits-list li {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-left: 5px solid var(--cor-secundaria);
-            border-radius: 4px;
-            font-size: 1.1em;
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--cor-secundaria);
         }
         
         .footer {
             text-align: center;
             padding: 20px;
             font-size: 0.8em;
-            color: #666;
+            color: #444;
+            background-color: #000000;
         }
         
-        /* Mobile adjustments */
         @media (max-width: 600px) {
             .header h1 {
                 font-size: 2em;
             }
-            .header p {
-                font-size: 1em;
+            .header h2 {
+                font-size: 1.2em;
             }
             .cta-button {
-                font-size: 1.3em;
+                font-size: 1.2em;
+                margin: 5px 0;
             }
         }
     </style>
@@ -155,70 +222,87 @@
 <body>
 
     <div class="header">
-        <h1>SketchUp: Curso do Zero ao Avançado</h1>
-        <p>Domine a modelagem 3D e turbine sua carreira com projetos incríveis!</p>
-        
-        <a href="https://go.hotmart.com/M95464976M" class="cta-button">
-            GARANTA SUA VAGA AGORA!
-        </a>
+        <div class="header-content">
+            <h1>SKETCHUP: DO ZERO AO PROFISSIONAL!</h1>
+            <h2>Domine a Modelagem 3D e Crie Projetos Incríveis Agora.</h2>
+            
+            <div class="cta-group">
+                <a href="https://go.hotmart.com/M95464976M?dp=1" class="cta-button btn-saiba-mais" target="_blank">
+                    SAIBA MAIS
+                </a>
+                <a href="https://go.hotmart.com/M95464976M?ap=4b22" class="cta-button btn-compre-agora" target="_blank">
+                    COMPRE AGORA
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="container">
         
-        <h2>Conteúdo Exclusivo do Curso</h2>
+        <h2>Assista a Nossa Apresentação Rápida</h2>
+
+        <div class="media-section">
+            <div class="media-item" style="grid-column: 1 / -1;">
+                <video controls poster="capa-principal.jpg" style="max-height: 400px; object-fit: cover;">
+                    <source src="video-apresentacao.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+                <h3>VÍDEO PRINCIPAL: Guia Rápido do Curso</h3>
+            </div>
+        </div>
+        
+        <h2>Conteúdo e Benefícios em Destaque</h2>
 
         <div class="media-section">
             <div class="media-item">
-                <video controls poster="EC - Stories Sketchup - 1.jpg">
-                    <source src="SketchUp (Storys).mp4" type="video/mp4">
+                <video controls poster="capa-principal.jpg">
+                    <source src="video-beneficios.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
-                <h3>O que você vai aprender? (16s)</h3>
+                <h3>Benefícios, Certificado e Módulo Bônus (16s)</h3>
             </div>
 
             <div class="media-item">
-                <video controls poster="EC - Stories Sketchup - 1.jpg">
-                    <source src="Vídeo 2 (Story).mp4" type="video/mp4">
+                <video controls poster="stories-modulo.jpg">
+                    <source src="video-oferta.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
-                <h3>Preço e Condições Especiais (14s)</h3>
+                <h3>Condições Especiais e Preço Exclusivo (15s)</h3>
             </div>
             
             <div class="media-item">
-                <video controls poster="EC - Stories Sketchup - 1.jpg">
-                    <source src="Você quer aprender SketchUp e criar projetos incríveis em 3D.mp4" type="video/mp4">
+                <video controls poster="hero-mude-trajetoria.jpg">
+                    <source src="video-motivacao.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
-                <h3>Mude sua Trajetória! (17s)</h3>
+                <h3>Mude Sua Trajetória Profissional (17s)</h3>
             </div>
         </div>
         
-        <a href="https://go.hotmart.com/M95464976M" class="cta-button">
-            EU QUERO ME INSCREVER AGORA!
-        </a>
+        <h2>Veja o que você vai aprender</h2>
 
-        <div class="benefits-section">
-            <h2>Por que este é o curso ideal para você?</h2>
-            <ul class="benefits-list">
-                <li>Acesso Vitalício ao Conteúdo.</li>
-                <li>Aulas Práticas, do Zero ao Avançado.</li>
-                <li>Suporte Exclusivo e Direto ao Aluno.</li>
-                <li>Projeto 3D Completo Inclusos.</li>
-                <li>Certificado Reconhecido de Conclusão.</li>
-                <li>Módulo Bônus: Layout e Renderização.</li>
-            </ul>
+        <div class="gallery-section">
+            <div class="gallery-item"><img src="carrossel-beneficios.jpg" alt="Benefícios do curso SketchUp"></div>
+            <div class="gallery-item"><img src="stories-modulo.jpg" alt="Módulos e aulas do curso SketchUp"></div>
+            <div class="gallery-item"><img src="capa-principal.jpg" alt="Capa Principal SketchUp"></div>
+            <div class="gallery-item"><img src="hero-mude-trajetoria.jpg" alt="Mude sua trajetória"></div>
+            <div class="gallery-item"><img src="capa-autocad-sketchup.jpg" alt="Bônus AutoCAD e SketchUp"></div>
         </div>
         
-        <p style="text-align: center; margin-top: 30px;">
-            <a href="https://go.hotmart.com/M95464976M?dp=1" style="color: var(--cor-secundaria); font-weight: bold;">
-                Ou clique aqui para ir direto para o checkout!
+        <div class="cta-group">
+            <a href="https://go.hotmart.com/M95464976M?ap=4b22" class="cta-button btn-compre-agora" target="_blank">
+                COMPRE AGORA E GARANTA O DESCONTO!
             </a>
-        </p>
+            <a href="https://go.hotmart.com/M95464976M?dp=1" class="cta-button btn-saiba-mais" target="_blank">
+                Ver Detalhes do Curso
+            </a>
+        </div>
 
     </div>
 
     <div class="footer">
-        © Expert Cursos. Todos os direitos reservados. | <a href="https://go.hotmart.com/M95464976M" style="color: #666;">Termos de Uso</a>
+        <p>Expert Cursos - Ensino de Confiança. </p>
+        <p>Link de Afiliação Hotmart. Todos os direitos reservados.</p>
     </div>
 
 </body>
