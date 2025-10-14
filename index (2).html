@@ -6,7 +6,7 @@
     <title>SketchUp do Zero ao Pro | Curso Online Expert Cursos</title>
     
     <style>
-        /* Variáveis de Cores Baseadas em Stories_Sketchup_3.jpg */
+        /* Variáveis de Cores Baseadas no padrão Stories_Sketchup_3.jpg */
         :root {
             --cor-fundo-principal: #040D1D; /* Azul Escuro/Quase Preto */
             --cor-secundaria: #1E88E5;    /* Azul SketchUp/Links */
@@ -31,10 +31,9 @@
             padding: 60px 20px;
             text-align: center;
             position: relative;
-            overflow: hidden; /* Garante que a grade não vaze */
+            overflow: hidden; 
         }
         
-        /* Efeito de Grade no Background */
         .header::before {
             content: '';
             position: absolute;
@@ -45,8 +44,8 @@
             background: 
                 linear-gradient(90deg, transparent 99%, rgba(30, 136, 229, 0.1) 1%) 0 0,
                 linear-gradient(transparent 99%, rgba(30, 136, 229, 0.1) 1%) 0 0;
-            background-size: 50px 50px; /* Tamanho dos quadrados da grade */
-            animation: moveGrid 30s linear infinite; /* Aplica a animação */
+            background-size: 50px 50px; 
+            animation: moveGrid 30s linear infinite; 
             opacity: 0.3;
             z-index: 0;
         }
@@ -60,18 +59,16 @@
             }
         }
 
-        /* Conteúdo do Cabeçalho */
         .header-content {
             position: relative;
-            z-index: 1; /* Garante que o conteúdo fique acima da grade */
+            z-index: 1; 
         }
 
-        /* Animação do Letreiro */
         .header h1 {
             font-size: 3em;
             margin-bottom: 10px;
             color: var(--cor-hotmart);
-            animation: pulseText 2s infinite alternate; /* Aplica a animação */
+            animation: pulseText 2s infinite alternate; 
         }
 
         @keyframes pulseText {
@@ -154,7 +151,7 @@
         }
 
         .media-item {
-            background-color: #121A2C; /* Cor um pouco mais clara que o fundo */
+            background-color: #121A2C; 
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -176,7 +173,7 @@
         }
         
         /* ---------------------------------------------------- */
-        /* Galeria de Imagens (Para as imagens stories/carrossel) */
+        /* Galeria de Imagens */
         /* ---------------------------------------------------- */
         .gallery-section {
             display: grid;
@@ -243,8 +240,8 @@
 
         <div class="media-section">
             <div class="media-item" style="grid-column: 1 / -1;">
-                <video controls poster="capa-principal.jpg" style="max-height: 400px; object-fit: cover;">
-                    <source src="video-apresentacao.mp4" type="video/mp4">
+                <video controls poster="hero01.jpg" style="max-height: 400px; object-fit: cover;">
+                    <source src="video-01-apresentacao.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
                 <h3>VÍDEO PRINCIPAL: Guia Rápido do Curso</h3>
@@ -255,24 +252,24 @@
 
         <div class="media-section">
             <div class="media-item">
-                <video controls poster="capa-principal.jpg">
-                    <source src="video-beneficios.mp4" type="video/mp4">
+                <video controls poster="stories-sketchup-2.jpg">
+                    <source src="video-sketchup-story.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
                 <h3>Benefícios, Certificado e Módulo Bônus (16s)</h3>
             </div>
 
             <div class="media-item">
-                <video controls poster="stories-modulo.jpg">
-                    <source src="video-oferta.mp4" type="video/mp4">
+                <video controls poster="stories-sketchup-3.jpg">
+                    <source src="video-oferta-02.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
                 <h3>Condições Especiais e Preço Exclusivo (15s)</h3>
             </div>
             
             <div class="media-item">
-                <video controls poster="hero-mude-trajetoria.jpg">
-                    <source src="video-motivacao.mp4" type="video/mp4">
+                <video controls poster="hero02.jpg">
+                    <source src="video-motivacao-3d.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
                 <h3>Mude Sua Trajetória Profissional (17s)</h3>
@@ -282,11 +279,12 @@
         <h2>Veja o que você vai aprender</h2>
 
         <div class="gallery-section">
-            <div class="gallery-item"><img src="carrossel-beneficios.jpg" alt="Benefícios do curso SketchUp"></div>
-            <div class="gallery-item"><img src="stories-modulo.jpg" alt="Módulos e aulas do curso SketchUp"></div>
-            <div class="gallery-item"><img src="capa-principal.jpg" alt="Capa Principal SketchUp"></div>
-            <div class="gallery-item"><img src="hero-mude-trajetoria.jpg" alt="Mude sua trajetória"></div>
-            <div class="gallery-item"><img src="capa-autocad-sketchup.jpg" alt="Bônus AutoCAD e SketchUp"></div>
+            <div class="gallery-item"><img src="carrossel-02.jpeg" alt="Benefícios do curso SketchUp"></div>
+            <div class="gallery-item"><img src="stories-sketchup-3.jpg" alt="Módulos e aulas do curso SketchUp"></div>
+            <div class="gallery-item"><img src="stories-sketchup-4.jpg" alt="Certificado do Curso"></div>
+            <div class="gallery-item"><img src="hero01.jpg" alt="Mude sua trajetória"></div>
+            <div class="gallery-item"><img src="ec-post-autocad-sketchup-3.jpg" alt="Bônus AutoCAD e SketchUp"></div>
+            <div class="gallery-item"><img src="carrossel-01.jpg" alt="Carrossel Sketchup e Layout"></div>
         </div>
         
         <div class="cta-group">
