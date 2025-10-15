@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Online de SketchUp + Layout - Expert Cursos</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="hero-section">
+        <h1 class="header-title">SketchUp & Layout</h1>
+        <p class="header-subtitle">Curso do Zero ao Profissional</p>
+    </header>
+
+    <section class="section-image" id="zero-ao-pro">
+        <h2>Do Zero ao Profissional</h2>
+        <img src="carrossel-beneficios.jpeg" alt="Benefícios do curso SketchUp: Aprenda na prática, Projetos em 3D, Suporte Exclusivo, Acesso Vitalício, Certificado de Conclusão.">
+    </section>
+
+    <section class="section-video" id="video-beneficios">
+        <h2>Benefícios do Curso</h2>
+        <video controls poster="capa-principal.jpg"> <source src="video-beneficios.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </section>
+    
+    <section class="section-image" id="chamada-principal">
+        <h2>Curso Online de SketchUp + Layout</h2>
+        <img src="capa-principal.jpg" alt="Curso Online de SketchUp + Layout. Curso completo, certificado e 100% prático.">
+    </section>
+
+    <section class="section-image" id="modulos">
+        <h2>Conteúdo do Curso</h2>
+        <img src="stories-modulo.jpg" alt="Curso Online de SketchUp: 10 módulos, 50 aulas, Plantas, Planejados, Projetos em 3D. Módulo Bônus Layout Completo.">
+    </section>
+    
+    <section class="section-image" id="certificado">
+        <h2>100% Online e Certificado</h2>
+        <img src="Stories-Sketchup-4.jpg" alt="Curso de SketchUp 100% Online com Certificado.">
+    </section>
+
+    <section class="section-video" id="trajetoria">
+        <h2>Mude Sua Trajetória Profissional</h2>
+        <video controls>
+            <source src="Mude Sua Trajetória Profissional (17s).mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; Expert Cursos - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
